@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AeroReserve</string>
+
+    <string-array name="cities">
+        <item>Москва</item>
+        <item>Пенза</item>
+        <item>Самара</item>
+        <item>Сочи</item>
+        <item>Казань</item>
+        <item>Уфа</item>
+        <item>Омск</item>
+        <item>Тюмень</item>
+        <item>Тула</item>
+        <item>Калуга</item>
+    </string-array>
+
+
+    <string name="LoginScreenBodyText">Welcome!</string>
+    <string name="LoginScreenTextButton">Log in</string>
+    <string name="LoginScreenTextView1">Don,t have an account yet?</string>
+    <string name="LoginScreenTextView2">Create an account</string>
+    <string name="LoginScreenEditText1">Login</string>
+    <string name="LoginScreenEditText2">Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

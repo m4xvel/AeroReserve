@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".information">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStartHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="70dp"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:background="@drawable/elipse"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/contentStartHorizontal"/>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000₽"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvetica_regular"
+        android:textSize="@dimen/TextSize32sp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Москва"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textSize="@dimen/TextSize24sp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/arrow_big"
+        app:layout_constraintTop_toBottomOf="@id/textView22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cочи"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textSize="@dimen/TextSize32sp"
+        app:layout_constraintTop_toBottomOf="@id/imageView17"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:textSize="@dimen/TextSize14sp"
+        android:text="S7"
+        app:layout_constraintBottom_toBottomOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textSize="@dimen/TextSize14sp"
+        android:text="Компания:"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textSize="@dimen/TextSize14sp"
+        android:text="Тип:"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/textView28" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Бизнес-класс, эконом-класс"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:textSize="@dimen/TextSize14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView29"
+        app:layout_constraintStart_toEndOf="@+id/textView29"
+        app:layout_constraintTop_toTopOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:text="Кол-во свободных мест:"
+        android:textSize="@dimen/TextSize14sp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/textView29" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="540"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:textSize="@dimen/TextSize14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView34"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Оплатить"
+        android:letterSpacing="0.05"
+        android:textAllCaps="false"
+        android:textSize="@dimen/TextSize16sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/contentEnd"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded_gray"
+        android:text="Бронировать"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="0dp"
+        android:letterSpacing="0.05"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:textSize="@dimen/TextSize16sp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        app:layout_constraintTop_toBottomOf="@id/textView34"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

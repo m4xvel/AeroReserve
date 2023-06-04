@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextSize36sp">36sp</dimen>
+    <dimen name="TextSize32sp">32sp</dimen>
+    <dimen name="TextSize24sp">24sp</dimen>
+    <dimen name="TextSize20sp">20sp</dimen>
+    <dimen name="TextSize16sp">16sp</dimen>
+    <dimen name="TextSize14sp">14sp</dimen>
+    <dimen name="TextSize10sp">10sp</dimen>
+    <dimen name="PaddingLeft20">20dp</dimen>
+
+    <dimen name="LoginScreenBodyTextWidth">159dp</dimen>
+    <dimen name="LoginScreenBodyTextHeight">50dp</dimen>
+    <dimen name="LoginScreenButtonWidth">100dp</dimen>
+    <dimen name="LoginScreenButtonHeight">40dp</dimen>
+    <dimen name="LoginScreenImageWidth">200dp</dimen>
+    <dimen name="LoginScreenImageHeight">200dp</dimen>
+    <dimen name="LoginScreenEditTextWidth">240dp</dimen>
+    <dimen name="LoginScreenEditTextHeight">40dp</dimen>
+    <dimen name="LoginScreenIconWidth">20dp</dimen>
+    <dimen name="LoginScreenIconHeight">20dp</dimen>
+    <dimen name="LoginScreenIconMarginEnd">20dp</dimen>
+</resources>

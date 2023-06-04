@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStartHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="95dp"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/some_id"
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/ibmplexsans_extralight"
+        android:gravity="center"
+        android:text="Войдите в аккаунт, чтобы видеть историю бронирования и покупок."
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="История"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textSize="@dimen/TextSize24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/contentStartHorizontal" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:text="Log in"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

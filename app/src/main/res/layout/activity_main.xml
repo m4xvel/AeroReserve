@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/home_frame">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStartHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="28dp"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="184dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:text="Поиск дешёвых авиабилетов"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toTopOf="@id/contentStartHorizontal" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="118dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="53dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:text="Популярное"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize20sp"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <Button
+        android:id="@+id/BigButton"
+        android:layout_width="48dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_right"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BigButton"
+        app:layout_constraintLeft_toLeftOf="@+id/BigButton"
+        app:layout_constraintRight_toRightOf="@+id/BigButton"
+        app:layout_constraintTop_toTopOf="@+id/BigButton"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/next" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_popular_active"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Москва"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Сочи"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:srcCompat="@drawable/aircraft_white" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_popular_active"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toBottomOf="@id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_popular_active"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toBottomOf="@id/button2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_popular_active"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintLeft_toLeftOf="@+id/button5"
+        app:layout_constraintRight_toRightOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:srcCompat="@drawable/aircraft_white" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintLeft_toLeftOf="@+id/button4"
+        app:layout_constraintRight_toRightOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4"
+        app:srcCompat="@drawable/aircraft_white" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintLeft_toLeftOf="@+id/button6"
+        app:layout_constraintRight_toRightOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:srcCompat="@drawable/aircraft_white" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Уфа"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintLeft_toLeftOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Казань"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintLeft_toLeftOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Пенза"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintLeft_toLeftOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Москва"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintLeft_toLeftOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Самара"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintLeft_toLeftOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/button6" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Омск"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintLeft_toLeftOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/button6" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="232dp"
+        android:layout_height="39.5dp"
+        android:layout_marginTop="30dp"
+        app:boxStrokeColor="@color/blue"
+        app:endIconTint="@color/white"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/textView4"
+        app:layout_constraintRight_toRightOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView6"
+            style="@style/MyAutoCompleteTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:fontFamily="@font/ibmplexsans_regular"
+            android:inputType="none"
+            android:text="Откуда?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSize16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="232dp"
+        android:layout_height="39.5dp"
+        android:layout_marginTop="1dp"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:endIconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView7"
+            style="@style/MyAutoCompleteTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:fontFamily="@font/ibmplexsans_regular"
+            android:inputType="none"
+            android:text="Куда?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSize16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

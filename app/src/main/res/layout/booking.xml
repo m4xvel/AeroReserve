@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".booking">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStartHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="30dp"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/TextSize24sp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Бронирование авиабилета"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentStartHorizontal"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:textSize="@dimen/TextSize16sp"
+        android:background="@drawable/edittetext_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="ФИО"
+        app:layout_constraintTop_toBottomOf="@id/textView37"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edittetext_border"
+        android:ems="10"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:hint="Номер телефона"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName4" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/text_radius_top"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Паспорт"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName5" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/text_radius_top"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Класс"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintRight_toRightOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4"
+        app:srcCompat="@drawable/full_name" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintRight_toRightOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName5"
+        app:srcCompat="@drawable/phone"/>
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_pomogite"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/textView39"
+        app:layout_constraintStart_toStartOf="@+id/textView39"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="@+id/button10"
+        app:layout_constraintStart_toStartOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="@+id/button10"
+        app:srcCompat="@drawable/camera" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:padding="0dp"
+        android:text="Подтвердить"
+        android:textAllCaps="false"
+        android:textSize="@dimen/TextSize16sp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/textView40"
+        app:layout_constraintStart_toStartOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@id/textView40">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-2dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:buttonTint="@color/blue"
+            android:fontFamily="@font/ibmplexsans_light"
+            android:text="Эконом"
+            android:textSize="@dimen/TextSize16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-2dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:buttonTint="@color/blue"
+            android:fontFamily="@font/ibmplexsans_light"
+            android:text="Бизнес"
+            android:textSize="@dimen/TextSize16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-2dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/button_pomogite"
+            android:buttonTint="@color/blue"
+            android:fontFamily="@font/ibmplexsans_light"
+            android:text="Первый"
+            android:textSize="@dimen/TextSize16sp" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

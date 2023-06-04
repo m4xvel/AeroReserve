@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787718699645",
+    "project_id": "aeroreserve-e2911",
+    "storage_bucket": "aeroreserve-e2911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787718699645:android:25db2bc7fae66169aecf14",
+        "android_client_info": {
+          "package_name": "com.m4xvel.aeroreserve"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI-OWhtHLbkQ3JM65LJg7JTk91awy9gOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainActivity">
+
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="com.m4xvel.aeroreserve.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/information"
+        android:name="com.m4xvel.aeroreserve.information"
+        android:label="information"
+        tools:layout="@layout/information" />
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.m4xvel.aeroreserve.booking"
+        android:label="booking"
+        tools:layout="@layout/booking" />
+    <fragment
+        android:id="@+id/error"
+        android:name="com.m4xvel.aeroreserve.error"
+        android:label="error"
+        tools:layout="@layout/error" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.m4xvel.aeroreserve.profile"
+        android:label="profile"
+        tools:layout="@layout/profile" />
+    <fragment
+        android:id="@+id/authorization"
+        android:name="com.m4xvel.aeroreserve.authorization"
+        android:label="authorization"
+        tools:layout="@layout/authorization" />
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.m4xvel.aeroreserve.registration"
+        android:label="registration"
+        tools:layout="@layout/registration" />
+    <fragment
+        android:id="@+id/authorized_profile"
+        android:name="com.m4xvel.aeroreserve.authorized_profile"
+        android:label="authorized_profile"
+        tools:layout="@layout/authorized_profile" />
+</navigation>

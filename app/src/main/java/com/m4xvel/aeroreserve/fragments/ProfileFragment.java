@@ -2,10 +2,14 @@ package com.m4xvel.aeroreserve.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -20,15 +24,26 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.m4xvel.aeroreserve.BookingAdapter;
 import com.m4xvel.aeroreserve.R;
 import com.m4xvel.aeroreserve.authorization;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 public class ProfileFragment extends Fragment {
 
-    private TextView textView8;
-    private TextView textView9;
-    private TextView textView17;
-    private FirebaseAuth mAuth;
+    RecyclerView recyclerView;
+    ArrayList<Booking> list;
+    Query databaseReference;
+    BookingAdapter adapter;
 
     com.m4xvel.aeroreserve.authorization authorization = new authorization();
 
@@ -73,6 +88,30 @@ public class ProfileFragment extends Fragment {
             userEmail.setText(email);
             textView8.setVisibility(View.GONE);
             textView17.setVisibility(View.VISIBLE);
+
+            recyclerView = rootView.findViewById(R.id.bookingRecyclerView);
+            FirebaseUser user = mAuth.getCurrentUser();
+            databaseReference = FirebaseDatabase.getInstance().getReference("confirmed").orderByChild("email").equalTo(email);
+            list = new ArrayList<>();
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            adapter = new BookingAdapter(getContext(), list);
+            recyclerView.setAdapter(adapter);
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    list.clear();
+                    for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
+                        Booking booking = dataSnapshot.getValue(Booking.class);
+                        list.add(booking);
+                    }
+                    Collections.reverse(list);
+                    adapter.notifyDataSetChanged();
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
+
         } else {
             textView8.setVisibility(View.VISIBLE);
             textView17.setVisibility(View.GONE);

@@ -44,5 +44,5 @@
         android:id="@+id/authorized_profile"
         android:name="com.m4xvel.aeroreserve.authorized_profile"
         android:label="authorized_profile"
-        tools:layout="@layout/authorized_profile" />
+        tools:layout="@layout/item_history" />
 </navigation>

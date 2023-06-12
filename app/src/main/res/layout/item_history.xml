@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/button3"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_history"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:srcCompat="@drawable/aircraft" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Сочи"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:text="Москва"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize16sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+        android:text="Забронировано"
+        android:gravity="center"
+        android:fontFamily="@font/ibmplexsans_light"
+        android:textColor="@color/white"
+        android:background="@drawable/info_history"
+        android:textSize="@dimen/TextSize16sp"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

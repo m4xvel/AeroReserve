@@ -27,6 +27,13 @@
         app:layout_constraintGuide_begin="70dp"
         android:orientation="horizontal" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentEndHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="50dp"
+        android:orientation="horizontal" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="224dp"
@@ -86,23 +93,6 @@
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <EditText
-        android:id="@+id/login_reg"
-        android:layout_width="@dimen/LoginScreenEditTextWidth"
-        android:layout_height="@dimen/LoginScreenEditTextHeight"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/edittetext_border"
-        android:ems="10"
-        android:fontFamily="@font/helvetica_light"
-        android:inputType="textPersonName"
-        android:paddingLeft="@dimen/PaddingLeft20"
-        android:hint="Login"
-        android:textColor="@color/black"
-        android:textSize="@dimen/TextSize16sp"
-        app:layout_constraintLeft_toLeftOf="@id/contentStart"
-        app:layout_constraintRight_toRightOf="@id/contentEnd"
-        app:layout_constraintTop_toBottomOf="@id/email_reg" />
-
-    <EditText
         android:id="@+id/password_reg"
         android:layout_width="@dimen/LoginScreenEditTextWidth"
         android:layout_height="@dimen/LoginScreenEditTextHeight"
@@ -110,24 +100,14 @@
         android:background="@drawable/edittetext_border"
         android:ems="10"
         android:fontFamily="@font/helvetica_light"
+        android:hint="Password"
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/PaddingLeft20"
-        android:hint="Password"
         android:textColor="@color/black"
         android:textSize="@dimen/TextSize16sp"
         app:layout_constraintLeft_toLeftOf="@id/contentStart"
         app:layout_constraintRight_toRightOf="@id/contentEnd"
-        app:layout_constraintTop_toBottomOf="@id/login_reg" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="@dimen/LoginScreenIconWidth"
-        android:layout_height="@dimen/LoginScreenIconHeight"
-        android:layout_marginEnd="@dimen/LoginScreenIconMarginEnd"
-        app:layout_constraintBottom_toBottomOf="@id/login_reg"
-        app:layout_constraintEnd_toEndOf="@id/login_reg"
-        app:layout_constraintTop_toTopOf="@id/login_reg"
-        app:srcCompat="@drawable/password" />
+        app:layout_constraintTop_toBottomOf="@id/email_reg"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -155,6 +135,15 @@
         app:layout_constraintLeft_toLeftOf="@id/contentStart"
         app:layout_constraintRight_toRightOf="@id/contentEnd"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/LoginScreenImageWidth"
+        android:layout_height="@dimen/LoginScreenImageHeight"
+        app:layout_constraintBottom_toBottomOf="@id/contentEndHorizontal"
+        app:layout_constraintLeft_toLeftOf="@id/contentStart"
+        app:layout_constraintRight_toRightOf="@id/contentEnd"
+        app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:layout_width="@dimen/LoginScreenIconWidth"

@@ -6,6 +6,7 @@
     <dimen name="TextSize20sp">20sp</dimen>
     <dimen name="TextSize16sp">16sp</dimen>
     <dimen name="TextSize14sp">14sp</dimen>
+    <dimen name="TextSize12sp">12sp</dimen>
     <dimen name="TextSize10sp">10sp</dimen>
     <dimen name="PaddingLeft20">20dp</dimen>
 

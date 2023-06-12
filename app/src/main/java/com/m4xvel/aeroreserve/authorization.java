@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class authorization extends AppCompatActivity {
 
@@ -59,7 +60,6 @@ public class authorization extends AppCompatActivity {
         button_login = findViewById(R.id.button_login);
 
         mAuth = FirebaseAuth.getInstance();
-
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,8 +71,14 @@ public class authorization extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(authorization.this, bottom_navigation_bar.class);
-                                startActivity(intent);
+                                String currentUser = mAuth.getCurrentUser().getUid();
+                                if (currentUser != null && currentUser.equals("OOYQ42NyalOaKe6F2U6OlHscVdE2")) {
+                                    Intent intent = new Intent(authorization.this, AdminPanel.class);
+                                    startActivity(intent);
+                                } else {
+                                    Intent intent = new Intent(authorization.this, bottom_navigation_bar.class);
+                                    startActivity(intent);
+                                }
                             } else {
                                 Toast.makeText(authorization.this, "Неправильно введён логин или пароль", Toast.LENGTH_SHORT).show();
                             }

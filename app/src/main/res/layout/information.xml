@@ -54,7 +54,7 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="80dp"
         android:text="Москва"
         android:textColor="@color/black"
         android:fontFamily="@font/ibmplexsans_regular"
@@ -103,38 +103,13 @@
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
         android:fontFamily="@font/ibmplexsans_regular"
-        android:textSize="@dimen/TextSize14sp"
         android:text="Компания:"
         android:textColor="@color/black"
-        app:layout_constraintLeft_toLeftOf="@id/contentStart"
-        app:layout_constraintTop_toBottomOf="@id/textView23" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/ibmplexsans_regular"
         android:textSize="@dimen/TextSize14sp"
-        android:text="Тип:"
-        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/contentStart"
-        app:layout_constraintTop_toBottomOf="@id/textView28" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="Бизнес-класс, эконом-класс"
-        android:textColor="@color/black"
-        android:fontFamily="@font/ibmplexsans_light"
-        android:textSize="@dimen/TextSize14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView29"
-        app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toTopOf="@+id/textView29" />
+        app:layout_constraintTop_toTopOf="@+id/contentStartHorizontal" />
 
     <TextView
         android:id="@+id/textView34"
@@ -143,10 +118,10 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/ibmplexsans_regular"
         android:text="Кол-во свободных мест:"
-        android:textSize="@dimen/TextSize14sp"
         android:textColor="@color/black"
+        android:textSize="@dimen/TextSize14sp"
         app:layout_constraintLeft_toLeftOf="@id/contentStart"
-        app:layout_constraintTop_toBottomOf="@id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
     <TextView
         android:id="@+id/textView35"
@@ -182,7 +157,7 @@
         android:id="@+id/button8"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/rounded_gray"
         android:text="Бронировать"
         android:textColor="@color/black"
@@ -195,5 +170,59 @@
         android:fontFamily="@font/ibmplexsans_regular"
         app:layout_constraintTop_toBottomOf="@id/textView34"
         app:layout_constraintLeft_toLeftOf="@id/contentStart" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="30dp"
+        android:layout_height="145dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/textView22"
+        app:srcCompat="@drawable/points" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        app:layout_constraintBottom_toTopOf="@+id/textView43"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.12"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize10sp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31.12"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextSize10sp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

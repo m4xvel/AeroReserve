@@ -2,36 +2,63 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:forceDarkAllowed="false"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AeroReserve"
-        android:forceDarkAllowed="false"
         tools:targetApi="31">
 
         <activity
             android:name=".bottom_navigation_bar"
-            android:theme="@style/Theme.AeroReserve.NoActionBar"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:exported="true">
-
+            android:theme="@style/Theme.AeroReserve.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".booking" android:exported="false"></activity>
-        <activity android:name=".MainActivity" android:exported="false"></activity>
-        <activity android:name=".profile" android:exported="false"></activity>
-        <activity android:name=".authorized_profile" android:exported="false"></activity>
-        <activity android:name=".error" android:exported="false" android:theme="@style/Theme.AeroReserve.NoActionBar" android:screenOrientation="portrait"></activity>
-        <activity android:name=".information" android:exported="false"></activity>
-        <activity android:name=".registration" android:exported="false" android:theme="@style/Theme.AeroReserve.NoActionBar" android:screenOrientation="portrait"></activity>
-        <activity android:name=".authorization" android:exported="false" android:theme="@style/Theme.AeroReserve.NoActionBar" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".booking"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".error"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AeroReserve.NoActionBar" />
+        <activity
+            android:name=".information"
+            android:exported="false" />
+        <activity
+            android:name=".registration"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AeroReserve.NoActionBar" />
+        <activity
+            android:name=".authorization"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AeroReserve.NoActionBar" />
+
+        <activity
+            android:name=".AdminPanel"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AeroReserve.NoActionBar" />
     </application>
 
 </manifest>
